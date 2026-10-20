@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChefBox - Meal Planner with Recipe Instructions</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 min-h-screen p-6 font-sans">
+
+  <!-- Header -->
+  <header class="max-w-7xl mx-auto bg-white/90 p-4 rounded-2xl shadow-lg mb-6 text-center border border-orange-100">
+    <h1 class="text-2xl font-extrabold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">🍳 ChefBox Meal Planner & Recipe Guide</h1>
+  </header>
+
+  <!-- Main 3-Column Layout -->
+  <main class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+    <!-- 1. LEFT SIDE (4 Cols): Monday to Sunday Calendar -->
+    <section class="lg:col-span-4 bg-white/90 p-5 rounded-2xl shadow-xl border border-indigo-100">
+      <h2 class="text-base font-bold text-indigo-700 mb-2">📅 Weekly Calendar</h2>
+      <p class="text-[11px] text-gray-500 mb-4">Click any day to view scheduled meals & step-by-step cooking instructions!</p>
+      
+      <div id="calendar-container" class="space-y-3 max-h-[650px] overflow-y-auto pr-1">
+        <!-- JS injects days here -->
+      </div>
+    </section>
+
+    <!-- 2. CENTRE (5 Cols): Master Menu List with Instructions -->
+    <section class="lg:col-span-5 bg-white/90 p-5 rounded-2xl shadow-xl border border-orange-100">
+      <h2 class="text-base font-bold text-orange-700 mb-2">🍲 Master Menu & Recipes</h2>
+      <p class="text-[11px] text-gray-500 mb-4">Drag dishes to calendar. Read full instructions below!</p>
+      
+      <div id="master-menu-container" class="space-y-4 max-h-[650px] overflow-y-auto pr-1">
+        <!-- JS injects menu categories here -->
+      </div>
+    </section>
+
+    <!-- 3. RIGHT SIDE (3 Cols): Grocery List -->
+    <section class="lg:col-span-3 bg-white/90 p-5 rounded-2xl shadow-xl border border-amber-100">
+      <h2 class="text-base font-bold text-amber-800 mb-2">🛒 Grocery List</h2>
+      <p class="text-[11px] text-gray-500 mb-4">Auto-generated shopping list for scheduled meals:</p>
+      
+      <ul id="grocery-list-container" class="space-y-1.5 max-h-[600px] overflow-y-auto text-xs text-gray-700 pr-1">
+        <li class="italic text-gray-400">No meals scheduled yet. Drag dishes to calendar!</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="planner.js"></script>
+</body>
+</html>
